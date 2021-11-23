@@ -39,17 +39,33 @@ let divElement = document.getElementById('main-container')
 ///////////////////////
 // --------- ex 3 ----------
 
+// const runCode = () => {
+//     console.log('start')
+//     getTime()
+//     console.log('end')
+// }
+
+// const getTime = () => {
+//      let now = new Date()
+//         let currentTime = now.toLocaleTimeString()
+//     setTimeout(() => {
+//         console.log(currentTime)
+//     }, 3000);
+
+// }
+
+///////////////////////////
+//--------- ex4 -------------
+
 const runCode = () => {
     console.log('start')
-    getTime()
+    setTimeout(getrandomNumber, 3000);
+    setTimeout(getrandomNumber, 5000);
+    setTimeout(getrandomNumber, 7000);
     console.log('end')
 }
 
-const getTime = () => {
-     let now = new Date()
-        let currentTime = now.toLocaleTimeString()
-    setTimeout(() => {
-        console.log(currentTime)
-    }, 3000);
-
+const getrandomNumber = () => {
+    let randomNumber = Math.floor(Math.random() * 100 + 1)
+    console.log(randomNumber)
 }
