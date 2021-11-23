@@ -73,15 +73,33 @@
 //////////////////////////////
 // --------- ex 5------
 
-let inputElement = document.getElementById('number-id')
-let divElement = document.getElementById('main-container')
+// let inputElement = document.getElementById('number-id')
+// let divElement = document.getElementById('main-container')
+
+// const loadCode = () => {
+//     setInterval( getRandomNumber, 1000); 
+// }
+
+// const getRandomNumber = () => {
+//     let randomNumber = Math.floor(Math.random() * inputElement.value)
+//     console.log(randomNumber)
+//     divElement.innerHTML = randomNumber
+// }
+
+///////////////////////////////////
+//--------- ex6--------------
+
 
 const loadCode = () => {
-    setInterval( getRandomNumber, 1000); 
+    setInterval( getRandomBackgroundColor, 1000); 
 }
 
-const getRandomNumber = () => {
-    let randomNumber = Math.floor(Math.random() * inputElement.value)
-    console.log(randomNumber)
-    divElement.innerHTML = randomNumber
+const getRandomBackgroundColor = () => {
+    let x = Math.floor(Math.random() * 256)
+    let y = Math.floor(Math.random() * 256)
+    let z = Math.floor(Math.random() * 256)
+    let backgroundColor = "rgb(" + x + "," + y + "," + z + ")"
+
+    document.body.style.background = backgroundColor
 }
+
