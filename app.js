@@ -135,13 +135,27 @@
 //////////////////////////////////
 // --------- ex 10 -----------
 
+// const runCode = () => {
+//     setTimeout(() => {
+//         getRandomNumberAfterDelay( (result) => console.log(result), 0,100)
+//     }, 5000);
+// }
+
+// const getRandomNumberAfterDelay = (callback, first, last) => {
+//  let randomNumber = Math.floor(Math.random() * (last- first)+first) 
+//  callback(randomNumber)
+// }
+
+////////////////////////////////////
+// --------- ex 11 -----------
+
 const runCode = () => {
     setTimeout(() => {
-        getRandomNumberAfterDelay( (result) => console.log(result), 0,100)
+         getRandomNumberAfterDelay((result) => console.log(result), 10,99)
     }, 5000);
 }
 
-const getRandomNumberAfterDelay = (callback, first, last) => {
- let randomNumber = Math.floor(Math.random() * last- first)+first 
- callback(randomNumber)
+const getRandomNumberAfterDelay =(callback, first, last)=> {
+    let randomNumber = Math.floor(Math.random()* (last- first) +first)
+    callback(randomNumber)
 }
