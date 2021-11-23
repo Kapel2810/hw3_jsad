@@ -106,14 +106,27 @@
 //////////////////////////////////
 // ---------- ex 8 ----------
 
+// const runCode = () => {
+//     getRandomNumberAfterDelay((result) => console.log(result))
+// }
+
+// const getRandomNumberAfterDelay = (callback) => {
+//     setTimeout(() => {
+//         let randomNumber = Math.floor(Math.random() * 100)
+//         callback(randomNumber)
+//     }, 5000);
+
+// }
+
+////////////////////////////////
+// ------- ex9------------
 const runCode = () => {
-    getRandomNumberAfterDelay((result) => console.log(result))
+    setTimeout(() => {
+        getRandomNumberAfterDelay( (result) => console.log(result), 100)
+    }, 5000);
 }
 
-const getRandomNumberAfterDelay = (callback) => {
-    setTimeout(() => {
-        let randomNumber = Math.floor(Math.random() * 100)
-        callback(randomNumber)
-    }, 5000);
-
+const getRandomNumberAfterDelay =(callback, limit) => {
+  let randomNumber = Math.floor(Math.random () * limit)
+  callback (randomNumber)
 }
