@@ -89,17 +89,31 @@
 ///////////////////////////////////
 //--------- ex6--------------
 
+// const loadCode = () => {
+//     setInterval( getRandomBackgroundColor, 1000); 
+// }
 
-const loadCode = () => {
-    setInterval( getRandomBackgroundColor, 1000); 
+// const getRandomBackgroundColor = () => {
+//     let x = Math.floor(Math.random() * 256)
+//     let y = Math.floor(Math.random() * 256)
+//     let z = Math.floor(Math.random() * 256)
+//     let backgroundColor = "rgb(" + x + "," + y + "," + z + ")"
+
+//     document.body.style.background = backgroundColor
+// }
+
+
+//////////////////////////////////
+// ---------- ex 8 ----------
+
+const runCode = () => {
+    getRandomNumberAfterDelay((result) => console.log(result))
 }
 
-const getRandomBackgroundColor = () => {
-    let x = Math.floor(Math.random() * 256)
-    let y = Math.floor(Math.random() * 256)
-    let z = Math.floor(Math.random() * 256)
-    let backgroundColor = "rgb(" + x + "," + y + "," + z + ")"
+const getRandomNumberAfterDelay = (callback) => {
+    setTimeout(() => {
+        let randomNumber = Math.floor(Math.random() * 100)
+        callback(randomNumber)
+    }, 5000);
 
-    document.body.style.background = backgroundColor
 }
-
