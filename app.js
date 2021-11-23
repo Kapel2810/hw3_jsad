@@ -1,5 +1,5 @@
 
-let divElement = document.getElementById('main-container')
+
 
 
 /////////////////////////////
@@ -57,15 +57,31 @@ let divElement = document.getElementById('main-container')
 ///////////////////////////
 //--------- ex4 -------------
 
-const runCode = () => {
-    console.log('start')
-    setTimeout(getrandomNumber, 3000);
-    setTimeout(getrandomNumber, 5000);
-    setTimeout(getrandomNumber, 7000);
-    console.log('end')
+// const runCode = () => {
+//     console.log('start')
+//     setTimeout(getrandomNumber, 3000);
+//     setTimeout(getrandomNumber, 5000);
+//     setTimeout(getrandomNumber, 7000);
+//     console.log('end')
+// }
+
+// const getrandomNumber = () => {
+//     let randomNumber = Math.floor(Math.random() * 100 + 1)
+//     console.log(randomNumber)
+// }
+
+//////////////////////////////
+// --------- ex 5------
+
+let inputElement = document.getElementById('number-id')
+let divElement = document.getElementById('main-container')
+
+const loadCode = () => {
+    setInterval( getRandomNumber, 1000); 
 }
 
-const getrandomNumber = () => {
-    let randomNumber = Math.floor(Math.random() * 100 + 1)
+const getRandomNumber = () => {
+    let randomNumber = Math.floor(Math.random() * inputElement.value)
     console.log(randomNumber)
+    divElement.innerHTML = randomNumber
 }
