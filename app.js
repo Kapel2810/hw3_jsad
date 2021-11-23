@@ -20,6 +20,25 @@ let divElement = document.getElementById('main-container')
 
 ///////////////////////
 // -------- ex 2 ----------
+
+// const runCode = () => {
+//     console.log('start')
+//     getTime()
+//     console.log('end')
+// }
+
+// const getTime = () => {
+//     setTimeout(() => {
+//         let now = new Date()
+//         let currentTime = now.toLocaleTimeString()
+//         console.log(currentTime)
+//     }, 3000);
+
+// }
+
+///////////////////////
+// --------- ex 3 ----------
+
 const runCode = () => {
     console.log('start')
     getTime()
@@ -27,9 +46,9 @@ const runCode = () => {
 }
 
 const getTime = () => {
-    setTimeout(() => {
-        let now = new Date()
+     let now = new Date()
         let currentTime = now.toLocaleTimeString()
+    setTimeout(() => {
         console.log(currentTime)
     }, 3000);
 
