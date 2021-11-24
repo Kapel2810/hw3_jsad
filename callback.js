@@ -207,29 +207,29 @@
 //////////////////////////////////////
 // ----------- ex 14 ---------------
 
-let spanElement = document.getElementById('span-id')
-let isRandom = true
-let intervalId = 0
+// let spanElement = document.getElementById('span-id')
+// let isRandom = true
+// let intervalId = 0
 
-const runCode = () => {
+// const runCode = () => {
 
-    setInterval(displayClock, 1000);
+//     setInterval(displayClock, 1000);
 
-    intervalId = setInterval(() => {
+//     intervalId = setInterval(() => {
 
-        if (isRandom) {
-            spanElement.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16)
+//         if (isRandom) {
+//             spanElement.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16)
 
-        }
+//         }
 
-    }, 1000);
-}
+//     }, 1000);
+// }
 
-const displayClock = () => {
-    let now = new Date()
-    let time = now.toLocaleTimeString()
-    console.log(time)
+// const displayClock = () => {
+//     let now = new Date()
+//     let time = now.toLocaleTimeString()
+//     console.log(time)
 
-    spanElement.innerText = time
-}
+//     spanElement.innerText = time
+// }
 
