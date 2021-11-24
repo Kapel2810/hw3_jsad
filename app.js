@@ -149,37 +149,42 @@
 ////////////////////////////////////
 // --------- ex 11 -----------
 
-// const runCode = () => {
-//     setTimeout(() => {
-//          getRandomNumberAfterDelay((result) => console.log(result), 10,99)
-//     }, 5000);
-// }
+const runCode = () => {
+    setTimeout(() => {
+        getRandomNumberAfterDelay((result) => console.log(result), 10, 99)
+    }, 5000);
+}
 
-// const getRandomNumberAfterDelay =(callback, first, last)=> {
-//     let randomNumber = Math.floor(Math.random()* (last- first) +first)
-//     callback(randomNumber)
-// }
+const getRandomNumberAfterDelay = (callback, first, last) => {
+    let randomNumber = Math.floor(Math.random() * (last - first) + first)
+
+    if (randomNumber % 2 === 0) {
+        callback(randomNumber)
+    } else {
+        console.log("error")
+    }
+}
 
 ////////////////////////////////////
 // ----------- ex12 -----------
 
-const runCode = () => {
-    setTimeout(() => {
-        getUserFromServer((result) => console.log(result))
-    }, 4000);
+// const runCode = () => {
+//     setTimeout(() => {
+//         getUserFromServer((result) => console.log(result))
+//     }, 4000);
 
-}
+// }
 
-const getUserFromServer = (callback) => {
+// const getUserFromServer = (callback) => {
 
-    const user = {
-        firstName: "Moshe",
-        lastName: "Ufnik"
-    }
+//     const user = {
+//         firstName: "Moshe",
+//         lastName: "Ufnik"
+//     }
 
-    return callback(user)
+//     return callback(user)
 
-}
+// }
 
 /////////////////////////////////////////
 // ---------- ex 13 ----------
