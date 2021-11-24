@@ -163,37 +163,40 @@
 ////////////////////////////////////
 // ----------- ex12 -----------
 
-// const runCode = () => {
-//     getUserFromServer((result) => console.log(result) )
-// }
+const runCode = () => {
+    setTimeout(() => {
+        getUserFromServer((result) => console.log(result))
+    }, 4000);
 
-// const getUserFromServer = (callback) => {
-//    setTimeout(() => {
-//         const user = {
-//         firstName: "Moshe",
-//         lastName: "Ufnik"
-//     }
+}
 
-//    return  callback(user)
-//    }, 4000);
-// }
+const getUserFromServer = (callback) => {
+
+    const user = {
+        firstName: "Moshe",
+        lastName: "Ufnik"
+    }
+
+    return callback(user)
+
+}
 
 /////////////////////////////////////////
 // ---------- ex 13 ----------
 
-const runCode = () => {
-    setTimeout(() => {
-        getGradesFromServer((result) => console.log(result))
-    }, 7000);
+// const runCode = () => {
+//     setTimeout(() => {
+//         getGradesFromServer((result) => console.log(result))
+//     }, 7000);
 
-}
+// }
 
-const getGradesFromServer = (callback) => {
+// const getGradesFromServer = (callback) => {
 
-    const grades = [100, 98, 75, 80, 100, 87]
-    for (let i = 0; i < grades.length; i++) {
-        return callback(grades)
-    }
-}
+//     const grades = [100, 98, 75, 80, 100, 87]
+//     for (let i = 0; i < grades.length; i++) {
+//         return callback(grades)
+//     }
+// }
 
 
