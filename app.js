@@ -149,13 +149,31 @@
 ////////////////////////////////////
 // --------- ex 11 -----------
 
+// const runCode = () => {
+//     setTimeout(() => {
+//          getRandomNumberAfterDelay((result) => console.log(result), 10,99)
+//     }, 5000);
+// }
+
+// const getRandomNumberAfterDelay =(callback, first, last)=> {
+//     let randomNumber = Math.floor(Math.random()* (last- first) +first)
+//     callback(randomNumber)
+// }
+
+////////////////////////////////////
+// ----------- ex12 -----------
+
 const runCode = () => {
-    setTimeout(() => {
-         getRandomNumberAfterDelay((result) => console.log(result), 10,99)
-    }, 5000);
+    getUserFromServer((result) => console.log(result) )
 }
 
-const getRandomNumberAfterDelay =(callback, first, last)=> {
-    let randomNumber = Math.floor(Math.random()* (last- first) +first)
-    callback(randomNumber)
+const getUserFromServer = (callback) => {
+   
+    const user = {
+        firstName: "Moshe",
+        lastName: "Ufnik"
+    }
+
+   return  callback(user)
+   
 }
