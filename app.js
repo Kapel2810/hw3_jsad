@@ -149,21 +149,21 @@
 ////////////////////////////////////
 // --------- ex 11 -----------
 
-const runCode = () => {
-    setTimeout(() => {
-        getRandomNumberAfterDelay((result) => console.log(result), 10, 99)
-    }, 5000);
-}
+// const runCode = () => {
+//     setTimeout(() => {
+//         getRandomNumberAfterDelay((result) => console.log(result), 10, 99)
+//     }, 5000);
+// }
 
-const getRandomNumberAfterDelay = (callback, first, last) => {
-    let randomNumber = Math.floor(Math.random() * (last - first) + first)
+// const getRandomNumberAfterDelay = (callback, first, last) => {
+//     let randomNumber = Math.floor(Math.random() * (last - first) + first)
 
-    if (randomNumber % 2 === 0) {
-        callback(randomNumber)
-    } else {
-        console.log("error")
-    }
-}
+//     if (randomNumber % 2 === 0) {
+//         callback(randomNumber)
+//     } else {
+//         console.log("error")
+//     }
+// }
 
 ////////////////////////////////////
 // ----------- ex12 -----------
@@ -204,4 +204,32 @@ const getRandomNumberAfterDelay = (callback, first, last) => {
 //     }
 // }
 
+//////////////////////////////////////
+// ----------- ex 14 ---------------
+
+let spanElement = document.getElementById('span-id')
+let isRandom = true
+let intervalId = 0
+
+const runCode = () => {
+
+    setInterval(displayClock, 1000);
+
+    intervalId = setInterval(() => {
+
+        if (isRandom) {
+            spanElement.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16)
+
+        }
+
+    }, 1000);
+}
+
+const displayClock = () => {
+    let now = new Date()
+    let time = now.toLocaleTimeString()
+    console.log(time)
+
+    spanElement.innerText = time
+}
 
