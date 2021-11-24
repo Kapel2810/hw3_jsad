@@ -168,12 +168,17 @@ const runCode = () => {
 }
 
 const getUserFromServer = (callback) => {
-   
-    const user = {
+   setTimeout(() => {
+        const user = {
         firstName: "Moshe",
         lastName: "Ufnik"
     }
 
    return  callback(user)
-   
+   }, 4000);
 }
+
+/////////////////////////////////////////
+// ---------- ex 13 ----------
+
+
