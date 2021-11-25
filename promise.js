@@ -4,7 +4,10 @@
 // ----------- ex 1 ----------
 
 const runCode = () => {
-    let myPromise = generate7BoomAfterDelayAsync(0, 100)
+    let minNumber = +prompt ('please enter min number')
+    let maxNumber = +prompt('please enter max number')
+
+    let myPromise = generate7BoomAfterDelayAsync(minNumber,maxNumber)
     setTimeout(() => {
         myPromise
             .then((number) => console.log('success boom: ' + number))
@@ -25,3 +28,11 @@ const runCode = () => {
         })
         return myPromise
     }
+
+// const runCode = () => {
+
+// }
+
+// const generatePrimeNumberAfterDelayAsync =() => {
+
+// }
